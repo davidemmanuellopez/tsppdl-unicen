@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.0)
 project(QtCmake)
 set(CMAKE_CXX_STANDARD 11)
 # Find includes in corresponding build directories
@@ -12,8 +12,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
-find_package(igraph)
-#find_package(Qt5MultimediaWidgets CONFIG REQUIRED)
 
 add_subdirectory(igraph)
 # Populate CMake variables with the sources
@@ -50,9 +48,6 @@ qt5_wrap_ui (File_mainwindow_ui_moc  ${File_mainwindow_ui})
 
 
 include_directories (${PROJECT_SOURCE_DIR})
-#include_directories (${Qt5MultimediaWidgets_INCLUDE_DIRS})
-#include_directories (/home/david/repos/igraph/include)
-#include_directories (/home/david/repos/build_igraph_0.9.10/include)
 
 add_library (MyProjectLib 
 	${File_mainwindow_cpp}
@@ -82,8 +77,6 @@ target_link_libraries (MyProjectLib Qt5::Widgets)
 target_link_libraries(MyProjectLib igraph)
 
 
-
-
-add_executable(MyProject ${File_main_cpp})
-target_link_libraries (MyProject MyProjectLib)
+add_executable(tsppdl-unicen ${File_main_cpp})
+target_link_libraries (tsppdl-unicen MyProjectLib)
 
