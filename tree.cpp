@@ -80,7 +80,7 @@ int Tree::addVertex(int pick, int del)
 void Tree::rmEdge(igraph_t& g,int a, int b)
 {
     igraph_integer_t eid;
-    igraph_get_eid(&g,&eid,a,b,1);
+    igraph_get_eid(&g,&eid,a,b,1,0);
     igraph_es_t arista;
     igraph_es_1(&arista,eid);
     igraph_delete_edges(&g,arista);

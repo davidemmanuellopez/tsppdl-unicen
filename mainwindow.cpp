@@ -9,10 +9,11 @@
 #include<tsplib.h>
 #include <heuristics.h>
 #include <QFuture>
-#include <QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentRun>
 #include <QThreadPool>
 #include <QRunnable>
 
+#include <QDebug>
 
 #define bufSize = 512;
 
@@ -112,8 +113,8 @@ void MainWindow::on_actionAbrir_triggered()
 {
     //archivo .tsp
     QString fileName = QFileDialog::getOpenFileName(this,"Abrir","","*.tsp");
-    ifstream file(fileName.toAscii());    
-
+    ifstream file(fileName.toLatin1());
+    qDebug() << "archivo" << fileName.toLatin1();
     //defino archivo .mtc
     string aux = fileName.toStdString().substr(fileName.lastIndexOf("/")+1);
     QString bef = aux.substr(0,aux.size()-4).c_str();
@@ -121,7 +122,7 @@ void MainWindow::on_actionAbrir_triggered()
     aux = "/match_" + aux.substr(0,aux.size()-4)+".mtc";
     fileName = fileName.section('/',0,-2);//sustraigo el path del archivo cargado anteriormente
     fileName.append(aux.c_str());//le agrego al path el nombre del archivo
-    ifstream mtcFile(fileName.toAscii());
+    ifstream mtcFile(fileName.toLatin1());
 
 
     //defino archivo .str
@@ -132,7 +133,7 @@ void MainWindow::on_actionAbrir_triggered()
 
     if(!file.good()){
         string error = "Error al leer el archivo: ";
-        QMessageBox::critical(this,"Error",error.c_str()+fileName.toAscii());
+        QMessageBox::critical(this,"Error",error.c_str()+fileName.toLatin1());
     }
     else if(!mtcFile.good()){
         string error = "Error al leer el archivo: ";
@@ -143,6 +144,7 @@ void MainWindow::on_actionAbrir_triggered()
         QMessageBox::critical(this,"Error",error.c_str());
     }
     else{
+
        loaded = true;
        cantNodos = getCantNodos(file);
 
@@ -158,17 +160,19 @@ void MainWindow::on_actionAbrir_triggered()
         igraph_vector_fill(&pickupNodes,-1);
         igraph_vector_fill(&deliveryNodes,-1);
         cargarPares(mtcFile,pickupNodes,deliveryNodes,cantNodos);
-
+        cout << "por construir grafo" << endl;
         //con los datos cargados ya se puede instanciar el grafo
         grafo = new Graph(adjacency,pickupNodes,deliveryNodes);
 
         igraph_vector_t recorrido;
         igraph_vector_init(&recorrido,grafo->getDimension()+1);
         cargarRecorrido(strFile,recorrido,grafo);
+
+        cout << "por construir arbol" << endl;
         arbol = new Tree((grafo->getDimension()+1)/2,grafo); //instanciacion del arbol con la mitad de nodos que el grafo (p&d)
-
+        cout << "por iniciar arbol" << endl;
         arbol->initTree(recorrido,grafo);
-
+        cout << "arbol iniciado" << endl;
         igraph_vector_destroy(&recorrido);
 
         file.close();

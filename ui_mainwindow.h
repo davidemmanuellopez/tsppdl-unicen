@@ -11,21 +11,21 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpinBox>
-#include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -268,30 +268,30 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "VNS Prober", 0, QApplication::UnicodeUTF8));
-        actionAbrir->setText(QApplication::translate("MainWindow", "Open...", 0, QApplication::UnicodeUTF8));
-        actionSave_Tour->setText(QApplication::translate("MainWindow", "Save Tour", 0, QApplication::UnicodeUTF8));
-        actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
-        actionAcerca_de->setText(QApplication::translate("MainWindow", "About...", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("MainWindow", "Apply Heuristics", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("MainWindow", "Heuristics", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("MainWindow", "Iterations", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("MainWindow", "5", 0, QApplication::UnicodeUTF8));
-        label_8->setText(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
-        label_9->setText(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
-        label_10->setText(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
-        label_11->setText(QApplication::translate("MainWindow", "Lenght before", 0, QApplication::UnicodeUTF8));
-        label_12->setText(QApplication::translate("MainWindow", "Lenght after", 0, QApplication::UnicodeUTF8));
-        pB_Draw->setText(QApplication::translate("MainWindow", "Draw", 0, QApplication::UnicodeUTF8));
-        pB_VNS->setText(QApplication::translate("MainWindow", "Apply VNS", 0, QApplication::UnicodeUTF8));
-        label_14->setText(QApplication::translate("MainWindow", "Population size", 0, QApplication::UnicodeUTF8));
-        label_15->setText(QApplication::translate("MainWindow", "Instance", 0, QApplication::UnicodeUTF8));
-        menuArchivo->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
-        menuAyuda->setTitle(QApplication::translate("MainWindow", "Help", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "VNS Prober", 0, 0));
+        actionAbrir->setText(QApplication::translate("MainWindow", "Open...", 0, 0));
+        actionSave_Tour->setText(QApplication::translate("MainWindow", "Save Tour", 0, 0));
+        actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, 0));
+        actionAcerca_de->setText(QApplication::translate("MainWindow", "About...", 0, 0));
+        pushButton->setText(QApplication::translate("MainWindow", "Apply Heuristics", 0, 0));
+        label->setText(QApplication::translate("MainWindow", "Heuristics", 0, 0));
+        label_2->setText(QApplication::translate("MainWindow", "Iterations", 0, 0));
+        label_3->setText(QApplication::translate("MainWindow", "1", 0, 0));
+        label_4->setText(QApplication::translate("MainWindow", "2", 0, 0));
+        label_5->setText(QApplication::translate("MainWindow", "3", 0, 0));
+        label_6->setText(QApplication::translate("MainWindow", "4", 0, 0));
+        label_7->setText(QApplication::translate("MainWindow", "5", 0, 0));
+        label_8->setText(QApplication::translate("MainWindow", "6", 0, 0));
+        label_9->setText(QApplication::translate("MainWindow", "7", 0, 0));
+        label_10->setText(QApplication::translate("MainWindow", "8", 0, 0));
+        label_11->setText(QApplication::translate("MainWindow", "Lenght before", 0, 0));
+        label_12->setText(QApplication::translate("MainWindow", "Lenght after", 0, 0));
+        pB_Draw->setText(QApplication::translate("MainWindow", "Draw", 0, 0));
+        pB_VNS->setText(QApplication::translate("MainWindow", "Apply VNS", 0, 0));
+        label_14->setText(QApplication::translate("MainWindow", "Population size", 0, 0));
+        label_15->setText(QApplication::translate("MainWindow", "Instance", 0, 0));
+        menuArchivo->setTitle(QApplication::translate("MainWindow", "File", 0, 0));
+        menuAyuda->setTitle(QApplication::translate("MainWindow", "Help", 0, 0));
     } // retranslateUi
 
 };
