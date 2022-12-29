@@ -1,2 +1,0 @@
-gcc x.c -I/usr/local/include/igraph -L/usr/local/lib -ligraph -o x
-
