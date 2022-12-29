@@ -1,8 +1,0 @@
-* clase arbol
-* clase grafo
-* buscar diferentes representaciones internas
-* multihilo
-* investigar si se puede usar heap
-* buscar lib para mostrar grafos
-* lib para hacer graficos
-* casos de prueba
