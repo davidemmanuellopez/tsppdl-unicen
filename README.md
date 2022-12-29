@@ -19,3 +19,6 @@ Despues de 10 años, actualización a Qt5 e Igraph 0.9, con nuevo projecto CMake
 Ir a File->Open, seleccionar subcarpeta datasets y elegir un archivo .tsp entre alguno de los datasets. Se recomienda de 25 o 51 nodos para comenzar.
 En el bloque izquierdo se pueden elegir heurísticas de forma individual, y cantidad de iteraciones a aplicar, para fines didacticos.
 La heurística VNS se aplica con el boton "Apply VNS", se puede seleccionar tamaño de la población (debido a que es un algoritmo genético) y cantidad de interaciones, población mas grande requiere mas recursos computacionales.
+
+Por la salida estandar de consola se puede observar la cantidad de pasos del algoritmo VNS, el objetivo es 14. Una vez finalizado el proceso se muestra el costo de la solución nueva en la caja de texto "length after".
+
