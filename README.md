@@ -7,7 +7,9 @@ Este trabajo obtuvo el 4to puesto en el simposio EST del congreso JAIIO 41' (201
 
 Despues de 10 años, actualización a Qt5 e Igraph 0.9, con nuevo projecto CMake. Ahora igraph es un submodulo en git.
 
-# instrucciones de compilacion
+# Instrucciones de compilacion
+
+Se debe tener qt5 dev instalado en el sistema.
 
 * "git clone --recursive https://github.com/davidemmanuellopez/tsppdl-unicen && cd tsppdl-unicen"
 * "mkdir build && cd build"
