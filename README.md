@@ -27,3 +27,5 @@ El algoritmo VNS se aplica con el boton "Apply VNS", se puede seleccionar tamañ
 
 Por la salida estandar de consola se puede observar la cantidad de pasos del algoritmo VNS, el objetivo es 14. Una vez finalizado el proceso se muestra el costo de la solución nueva en la caja de texto "length after".
 
+![MarineGEO circle logo](/doc/screenshot.png "MarineGEO logo")
+
