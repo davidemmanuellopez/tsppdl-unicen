@@ -1,4 +1,4 @@
-# tsppdl-unicen
+# TSPPDL Unicen
 
 This Software solves Traveler Salesman Problem (TSP) with the variant Pickup and Delivery (PDL) and LIFO Loading (LF).
 
