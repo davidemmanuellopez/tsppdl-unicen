@@ -551,7 +551,6 @@ void Tree::nodeSwap(int n1, int n2)
         };
     };
 
-     toGraphviz("swap");
 
      if (!primeron1)
      {

@@ -74,7 +74,7 @@ void ejecutarOperacion(Tree* t, MultiOperation op)
 
     //comienzo a pasar como hijos sus hermanos derechos
     int nright = t->getSig(nodo);
-    t->toGraphviz("debug");
+    //t->toGraphviz("debug");
     while (nright != op.final.rbrother)
     {
         int rm = nright;

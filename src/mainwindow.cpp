@@ -160,7 +160,7 @@ void MainWindow::on_actionAbrir_triggered()
         igraph_vector_fill(&pickupNodes,-1);
         igraph_vector_fill(&deliveryNodes,-1);
         cargarPares(mtcFile,pickupNodes,deliveryNodes,cantNodos);
-        cout << "por construir grafo" << endl;
+
         //con los datos cargados ya se puede instanciar el grafo
         grafo = new Graph(adjacency,pickupNodes,deliveryNodes);
 
@@ -168,11 +168,11 @@ void MainWindow::on_actionAbrir_triggered()
         igraph_vector_init(&recorrido,grafo->getDimension()+1);
         cargarRecorrido(strFile,recorrido,grafo);
 
-        cout << "por construir arbol" << endl;
+
         arbol = new Tree((grafo->getDimension()+1)/2,grafo); //instanciacion del arbol con la mitad de nodos que el grafo (p&d)
-        cout << "por iniciar arbol" << endl;
+
         arbol->initTree(recorrido,grafo);
-        cout << "arbol iniciado" << endl;
+
         igraph_vector_destroy(&recorrido);
 
         file.close();
