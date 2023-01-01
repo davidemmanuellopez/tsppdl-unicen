@@ -1,12 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
-project(QtCmake)
+project(TSPPDLUnicen)
 set(CMAKE_CXX_STANDARD 11)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# Instruct CMake to run moc automatically when needed
-#set(CMAKE_AUTOMOC ON)
-# Create code from a list of Qt designer ui files
-#set(CMAKE_AUTOUIC ON)
 
 #set(CMAKE_PREFIX_PATH c:/Qt/Qt5/)
 
@@ -46,7 +42,6 @@ set (File_heuristicgenerator_h ${PROJECT_SOURCE_DIR}/src/heuristicgenerator.h)
 qt5_wrap_cpp(File_mainwindow_hdr_moc ${File_mainwindow_h})
 qt5_wrap_ui (File_mainwindow_ui_moc  ${File_mainwindow_ui})
 
-
 include_directories (${PROJECT_SOURCE_DIR}/src)
 
 add_library (MyProjectLib 
@@ -71,7 +66,6 @@ add_library (MyProjectLib
 	${File_tsplib_cpp}
 
 )
-
 
 target_link_libraries (MyProjectLib Qt5::Widgets)
 target_link_libraries(MyProjectLib igraph)
