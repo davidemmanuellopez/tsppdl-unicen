@@ -2,10 +2,10 @@
 
 This Software solves Traveler Salesman Problem (TSP) with the variant Pickup and Delivery (PDL) and LIFO Loading (LF).
 
-    Copyright (C) <2011  David Emmanuel Lopez, Javier Marsicano
-    Copyright (C) <2022  David Emmanuel Lopez
+Copyright (C) <2011  David Emmanuel Lopez, Javier Marsicano
+Copyright (C) <2022  David Emmanuel Lopez
     
-    Contact: david.emmanuel.lopez@gmail.com
+Contact: david.emmanuel.lopez@gmail.com
  
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
